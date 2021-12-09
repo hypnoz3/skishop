@@ -9,6 +9,7 @@ import HomePage from "../../features/home/HomePage";
 import ProductDetails from "../../features/catalog/ProductDetails";
 import AboutPage from "../../features/about/AboutPage";
 import ContactPage from "../../features/contact/ContactPage";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -31,6 +32,7 @@ function App(): JSX.Element {
   
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer />
       <CssBaseline />
      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
      <Container>
