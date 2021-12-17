@@ -27,7 +27,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")] // api/products/id
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
 
