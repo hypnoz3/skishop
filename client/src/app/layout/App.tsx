@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ServerError from "../errors/ServerError";
 import NotFound from "../errors/NotFound";
+import BasketPage from "../../features/basket/BasketPage";
 
 
 
@@ -36,7 +37,7 @@ function App(): JSX.Element {
   
   return (
     <ThemeProvider theme={theme}>
-      <ToastContainer position="bottom-right" hideProgressBar/>
+      <ToastContainer position='bottom-right' hideProgressBar theme='colored' />
       <CssBaseline />
      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
      
@@ -49,6 +50,7 @@ function App(): JSX.Element {
      <Route path='/about' component={AboutPage} />
      <Route path='/contact' component={ContactPage} />
      <Route path='/server-error' component={ServerError} />
+     <Route path='/basket' component={BasketPage} />
      <Route component={NotFound} />
      </Switch>
      </Container>
