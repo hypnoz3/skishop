@@ -26,7 +26,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedList<Product>>> GetProducts([FromQuery]ProductParams productParams)
         {
-            var query =  _context.Products
+            var query = _context.Products
             .Sort(productParams.OrderBy)
             .Search(productParams.SearchTerm)
             .Filter(productParams.Brands, productParams.Types)
@@ -39,7 +39,7 @@ namespace API.Controllers
             return products;
         }
 
-        [HttpGet("{id}")] // api/products/id
+        [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Products.FindAsync(id);
