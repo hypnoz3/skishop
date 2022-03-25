@@ -94,9 +94,7 @@ namespace API.Controllers
                     {
                         FullName = orderDto.ShippingAddress.FullName,
                         Address1 = orderDto.ShippingAddress.Address1,
-                        Address2 = orderDto.ShippingAddress.Address2,
                         City = orderDto.ShippingAddress.City,
-                        State = orderDto.ShippingAddress.State,
                         Zip = orderDto.ShippingAddress.Zip,
                         Country = orderDto.ShippingAddress.Country,
                     };
