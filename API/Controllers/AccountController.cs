@@ -55,20 +55,6 @@ namespace API.Controllers
             };
         }
 
-        private async Task<Basket> RetrieveBasket(string buyerId)
-        {
-            if (string.IsNullOrEmpty(buyerId))
-            {
-                Response.Cookies.Delete("buyerId");
-                return null;
-            }
-
-            return await _context.Baskets
-                .Include(i => i.Items)
-                .ThenInclude(p => p.Product)
-                .FirstOrDefaultAsync(x => x.BuyerId == buyerId);
-        }
-
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
@@ -107,5 +93,33 @@ namespace API.Controllers
                 Basket = userBasket?.MapBasketToDto()
             };
         }
+
+        [Authorize]
+        [HttpGet("savedAddress")]
+        public async Task<ActionResult<UserAddress>> GetSavedAddress()
+        {
+            return await _userManager.Users
+                .Where(x => x.UserName == User.Identity.Name)
+                .Select(user => user.Address)
+                .FirstOrDefaultAsync();
+        }
+
+        private async Task<Basket> RetrieveBasket(string buyerId)
+        {
+            if (string.IsNullOrEmpty(buyerId))
+            {
+                Response.Cookies.Delete("buyerId");
+                return null;
+            }
+
+            return await _context.Baskets
+                .Include(i => i.Items)
+                .ThenInclude(p => p.Product)
+                .FirstOrDefaultAsync(x => x.BuyerId == buyerId);
+        }
+
+        
+
+        
     }  
 }
