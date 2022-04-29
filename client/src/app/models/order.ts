@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-
-export interface ShippingAddress {
-    fullName: string;
-    address: string;
-    address2: string;
-    city: string;
-    state: string;
-=======
 export interface ShippingAddress {
     fullName: string;
     address1: string;
     city: string;
->>>>>>> 621c30f4e1da6b2d9963ed950f164a1f5dcc11f1
     zip: string;
     country: string;
 }
