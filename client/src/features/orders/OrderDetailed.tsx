@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 621c30f4e1da6b2d9963ed950f164a1f5dcc11f1
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { BasketItem } from "../../app/models/basket";
