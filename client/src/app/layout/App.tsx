@@ -10,6 +10,7 @@ import ProductDetails from "../../features/catalog/ProductDetails";
 import AboutPage from "../../features/about/AboutPage";
 import ContactPage from "../../features/contact/ContactPage";
 import { ToastContainer } from "react-toastify";
+import Orders from "../../features/orders/Orders";
 import 'react-toastify/dist/ReactToastify.css';
 import ServerError from "../errors/ServerError";
 import NotFound from "../errors/NotFound";
@@ -75,6 +76,7 @@ function App() {
      <Route path='/server-error' component={ServerError} />
      <Route path='/basket' component={BasketPage} />
      <PrivateRoute path='/checkout' component={CheckoutPage} />
+     <PrivateRoute path='/orders' component={Orders} />
      <Route path='/login' component={Login} />
      <Route path='/register' component={Register} />
      <Route component={NotFound} />

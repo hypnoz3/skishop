@@ -8,7 +8,11 @@ export default function BasketPage() {
     const {basket} = useAppSelector(state => state.basket)
 
 
-    if (!basket) return <Typography variant='h3'>Your basket is empty</Typography>
+    if (!basket) return <Typography variant='h3'style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+  }}>Your basket is empty</Typography>
 
     return (
       <>
