@@ -1,6 +1,14 @@
+import { Typography } from "@mui/material";
+
 
 export default function HomePage() {
     return (
-        <img src="" alt="" />
+        <Typography variant='h2'style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+           Welcome to SkiShop!
+        </Typography>
     )
 }

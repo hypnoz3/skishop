@@ -66,7 +66,7 @@ function App() {
       <CssBaseline />
      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
      
-     <Route path={'/(.+)'} render={() => (
+     <Route path={'/'} render={() => (
      <Container>
      <Switch>
      <Route exact path='/' component={HomePage} />
