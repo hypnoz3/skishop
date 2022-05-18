@@ -1,5 +1,6 @@
 import { Container, CssBaseline } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
+import './styles.css';
 import { Route, Switch } from "react-router-dom";
 import createTheme from '@mui/material/styles/createTheme';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
