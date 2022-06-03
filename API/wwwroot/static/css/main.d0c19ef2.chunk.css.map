@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/app/layout/styles.css"],"names":[],"mappings":"AAAA,QACE,SACF,CAEA,WACE,UAAW,CACX,WAEA","file":"main.d0c19ef2.chunk.css","sourcesContent":[".app h1 {\r\n  color: red;\r\n}\r\n\r\n#snowboard {\r\n  width: 100%;\r\n  height: 100%;\r\n  \r\n  }"]}

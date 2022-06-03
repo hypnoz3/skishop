@@ -1,21 +1,36 @@
-import { Typography } from "@mui/material";
-import snowboarder from '../../app/layout/snowboarding_home.jpg'
+import { Box, Typography } from "@mui/material";
+import Slider from 'react-slick';
+
 
 export default function HomePage() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+
     return (
-        <div >
-        <Typography variant='h2'style={{display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            
-        }}>
-           Welcome to SkiShop!
-        </Typography>
-        <img id="snowboard" src={snowboarder} style={{display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            
-            }} alt="snowboard"></img>
-        </div>
+        <>
+            <Slider {...settings}>
+            <div>
+                <img src="/images/sportsman_skiing_mountain_top.jpg" alt="hero" style={{display: 'block', width: '100%', maxHeight: 800}}/>
+            </div>
+            <div>
+                <img src="/images/skiing_skier_jump_mountains_snow.jpg" alt="hero" style={{display: 'block', width: '100%', maxHeight: 800}}/>
+            </div>
+            <div>
+                <img src="/images/cabin_snow.jpg" alt="hero" style={{display: 'block', width: '100%', maxHeight: 800}}/>
+            </div>
+
+            </Slider>
+            <Box display='flex' justifyContent='center' sx={{p: 5}}>
+                <Typography variant='h1'>
+                Welcome to SkiShop!
+                </Typography>
+            </Box>
+        
+        </>
     )
 }
